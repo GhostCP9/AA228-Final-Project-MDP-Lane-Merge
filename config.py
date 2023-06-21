@@ -1,0 +1,15 @@
+CONFIG = {"action_list": ["merge_in", "throttle", "brake", "remain_constant_speed"],
+          "min_velocity": 50,
+          "max_velocity": 70,
+          "min_distance": 0,
+          "max_distance": 14,
+          "terminate_state": {"success_merge": 10000,
+                              "collision": -10000,
+                              "out_of_bounds": -1},
+          "reward_dict": {"collision": -1000,
+                          "success_merge": 10,
+                          #"success_merge": 1000,
+                          #"success_merge": 1000,
+                          "not_merge": 0,
+                          "out_of_bounds": -10}
+          }
